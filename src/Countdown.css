@@ -31,3 +31,13 @@
     margin-bottom: 20px;
   }
   
+  .disclaimer {
+    color: #B0BEC5; /* Light grey color */
+    position: absolute;
+    bottom: 10px; /* Adjust as needed for your layout */
+    width: 100%;
+    text-align: center;
+    font-size: 1em; /* Adjust the size as you see fit */
+    font-family: 'Arial', sans-serif; /* Match the font family with the rest of your app */
+  }
+  

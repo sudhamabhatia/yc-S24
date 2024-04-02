@@ -3,13 +3,14 @@ import './Countdown.css';
 import logo from './YCLogo.png'; // Make sure the path is correct
 
 const Countdown = () => {
-  // Set the end date and time
-  const countDownDate = new Date('April 22, 2024 23:59:59 GMT-0700').getTime();
-
+  
   // State to keep track of the time left
   const [timeLeft, setTimeLeft] = useState({ whole: '', fraction: '' });
 
   useEffect(() => {
+    // Set the end date and time
+    const countDownDate = new Date('April 22, 2024 23:59:59 GMT-0700').getTime();
+
     // Update the count down every second
     const interval = setInterval(() => {
       // Get today's date and time
@@ -43,7 +44,9 @@ const Countdown = () => {
         {timeLeft.whole}<sup>.{timeLeft.fraction}</sup>
       </span>
       <span className="label">days to S24 Application Deadline</span>
+      <div className="disclaimer">Unofficial app</div>
     </div>
+    
   );
 };
 
