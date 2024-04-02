@@ -42,7 +42,7 @@ const Countdown = () => {
       <span className="countdown-text">
         {timeLeft.whole}<sup>.{timeLeft.fraction}</sup>
       </span>
-      <span className="label">days to S24</span>
+      <span className="label">days to S24 Application Deadline</span>
     </div>
   );
 };

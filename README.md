@@ -1,4 +1,4 @@
-# This app shows the days left for the YC S24 application deadline
+# Unofficial Countdown timer for the YC S24 application deadline on 22nd April 8 PM PT
 
 ## To run
 
