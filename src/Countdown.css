@@ -1,0 +1,33 @@
+.countdown {
+    background-color: #2d333a;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .countdown-text {
+    font-size: 7.5em; /* Adjusted to 1.5 times the original size */
+    font-weight: bold;
+  }
+  
+  .countdown-text sup {
+    font-size: 0.5em; /* Adjust size as needed for the superscript */
+    top: -0.5em; /* Adjust top as needed for proper alignment */
+  }
+  
+  .label {
+    font-size: 2em;
+    margin-top: -0.5em;
+    color: #B0BEC5; /* Light grey color */
+  }
+  
+  .logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+  
