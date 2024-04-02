@@ -4,7 +4,7 @@ import logo from './YCLogo.png'; // Make sure the path is correct
 
 const Countdown = () => {
   // Set the end date and time
-  const countDownDate = new Date('April 22, 2024 20:00:00 GMT-0700').getTime();
+  const countDownDate = new Date('April 22, 2024 23:59:59 GMT-0700').getTime();
 
   // State to keep track of the time left
   const [timeLeft, setTimeLeft] = useState({ whole: '', fraction: '' });
