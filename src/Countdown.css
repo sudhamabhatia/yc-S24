@@ -41,3 +41,10 @@
     font-family: 'Arial', sans-serif; /* Match the font family with the rest of your app */
   }
   
+
+  .additional-info {
+    font-size: 20px;  /* Setting the font size as per your requirement */
+    color: #FFFFFF; /* Default white, change if needed */
+    text-align: center; /* Center align the text */
+    padding-top: 20px; /* Space from the above element */
+  }

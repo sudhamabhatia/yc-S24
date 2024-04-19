@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Countdown.css';
-import logo from './YCLogo.png'; // Make sure the path is correct
+import logo from './YCLogo.png';  // Ensure the logo path is correct
 
 const Countdown = () => {
   
   // State to keep track of the time left
-  const [timeLeft, setTimeLeft] = useState({ whole: '', fraction: '' });
+  const [timeLeft, setTimeLeft] = useState({
+    whole: '', 
+    fraction: '', 
+    hours: '', 
+    minutes: ''
+  });
 
   useEffect(() => {
     // Set the end date and time
@@ -19,17 +24,23 @@ const Countdown = () => {
       // Find the time left between now and the count down date
       const distance = countDownDate - now;
 
-      // Time calculations for days
-      const days = (distance / (1000 * 60 * 60 * 24)).toFixed(7);
-      const parts = days.split('.');
+      // Time calculations for days, hours, and minutes
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
       // Output the result in the state
-      setTimeLeft({ whole: parts[0], fraction: parts[1] });
+      setTimeLeft({ 
+        whole: days.toString(), 
+        fraction: ((distance / (1000 * 60 * 60 * 24) - days) * 10000000).toFixed(0),
+        hours: hours.toString(), 
+        minutes: minutes.toString()
+      });
 
       // If the count down is over, write some text 
       if (distance < 0) {
         clearInterval(interval);
-        setTimeLeft({ whole: '0', fraction: '0000000' });
+        setTimeLeft({ whole: '0', fraction: '0000000', hours: '0', minutes: '0' });
       }
     }, 100);
 
@@ -44,9 +55,11 @@ const Countdown = () => {
         {timeLeft.whole}<sup>.{timeLeft.fraction}</sup>
       </span>
       <span className="label">days to S24 Application Deadline</span>
+      <div className="additional-info">
+        {timeLeft.whole} days {timeLeft.hours} hours {timeLeft.minutes} minutes
+      </div>
       <div className="disclaimer">Unofficial app</div>
     </div>
-    
   );
 };
 
