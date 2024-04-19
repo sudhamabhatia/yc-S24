@@ -9,7 +9,7 @@ const Countdown = () => {
 
   useEffect(() => {
     // Set the end date and time
-    const countDownDate = new Date('April 22, 2024 23:59:59 GMT-0700').getTime();
+    const countDownDate = new Date('April 22, 2024 19:59:59 GMT-0700').getTime();
 
     // Update the count down every second
     const interval = setInterval(() => {
